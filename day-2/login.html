@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>LOGIN</title>
+        <style>
+            .container{
+                width: 300px;
+                padding: 10px;
+                margin:100px auto;
+                border: 2px solid black;
+                border-radius: 5px;
+                text-align: center;
+            }
+            button{
+                background-color: green;
+                color: white;
+                height: 30px;
+                width: 60px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: darkgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 style="text-align: center;">LOGIN</h1>
+            <form type="post">
+                <label for="name">Username </label>
+                <input type="text" placeholder="username" required><br><br>
+                <label for="password">Password</label>
+                <input type="password" placeholder="password" minlength="8" maxlength="12" required><br><br>
+                <button>Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
