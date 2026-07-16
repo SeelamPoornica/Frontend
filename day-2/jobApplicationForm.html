@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>REGISTRATION FORM</title>
+        <style>
+            .container{
+                width: 500px;
+                padding: 10px;
+                margin:100px auto;
+                border: 2px solid black;
+                border-radius: 5px;
+                text-align: center;
+            }
+            form{
+                margin-left: 40px;
+                text-align: left;
+            }
+            button{
+                background-color: green;
+                color: white;
+                height: 30px;
+                width: 60px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: darkgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 style="text-align: center;">JOB APPLICATION FORM</h1>
+            <form type="post">
+                <label for="name">Name </label>
+                <input type="text" placeholder="Name" style="margin-left: 30px;" required><br><br>
+                <label for="email">Email</label>
+                <input type="email" placeholder="email" style="margin-left: 30px;" required><br><br>
+                <label for="gender">Gender : </label>
+                <input type="radio" name="gender">
+                <label for="male">Male</label>
+                <input type="radio" name="gender">
+                <label for="female">Female</label>
+                <input type="radio" name="gender">
+                <label for="others">Others</label><br><br>
+                <label>Skills:</label><br>
+                <label><input type="checkbox" value="HTML">HTML</label><br>
+                <label><input type="checkbox" value="HTML">CSS</label><br>
+                <label><input type="checkbox" value="HTML">Java Script</label><br>
+                <label><input type="checkbox" value="HTML">JAVA</label><br>
+                <label><input type="checkbox" value="HTML">Python</label><br><br>
+                <label for="country">Country:</label>
+                <select style="margin-left: 20px;" required>
+                    <option value="">--Select Country--</option>
+                    <option value="india">India</option>
+                    <option value="usa">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="canada">Canada</option>
+                    <option value="australia">Australia</option>
+                    <option value="germany">Germany</option>
+                    <option value="france">France</option>
+                    <option value="japan">Japan</option>
+                    <option value="china">China</option>
+                </select><br><br>
+                <label for="address">Address :</label><br>
+                <textarea rows="4" cols="40" placeholder="address" required></textarea><br><br>
+                <label for="comments">Comments(Optional):</label><br>
+                <textarea rows="5" cols="40" placeholder="About me"></textarea><br><br>
+                <button style="margin-left: 100px;">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
