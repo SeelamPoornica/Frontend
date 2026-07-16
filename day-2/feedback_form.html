@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>REGISTRATION FORM</title>
+    <style>
+      .container {
+        width: 400px;
+        padding: 10px;
+        margin: 100px auto;
+        border: 2px solid black;
+        border-radius: 5px;
+        text-align: center;
+      }
+      form {
+        margin-left: 40px;
+        text-align: left;
+      }
+      button {
+        background-color: green;
+        color: white;
+        height: 30px;
+        width: 60px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: darkgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="text-align: center">FEEDBACK FORM</h1>
+      <form type="post">
+        <label for="patientName">Patient Name </label>
+        <input
+          type="text"
+          placeholder="Name"
+          style="margin-left: 40px"
+        /><br /><br />
+        <label for="doctorName">Doctor's Name</label>
+        <input type="text" placeholder="doctorName" style="margin-left: 30px;" required /><br /><br />
+        <label for="dateOfVisit">Date of Visit:</label>
+        <input type="date" placeholder="visitDate" style="margin-left: 40px;" required /><br /><br />
+        <label for="rating">Overall Satisfaction</label>
+        <select  required>
+          <option>--Select--</option>
+          <option>1-Poor</option>
+          <option>2-Fair</option>
+          <option>3-Good</option>
+          <option>4-Very Good</option>
+          <option>5-Excellent</option></select
+        ><br /><br />
+        <label for="comments">Additional Comments</label><br />
+        <textarea rows="4" cols="40"></textarea><br /><br />
+        <button style="margin-left: 100px">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
