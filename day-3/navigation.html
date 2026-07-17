@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navigationi Bar</title>
+        <style>
+            .navbar {
+                background-color: #333;
+                overflow: hidden;
+                border-radius: 8px; /* rounded corners */
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* shadow */
+            }
+            .navbar a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+                transition: background-color 0.3s, color 0.3s;
+            }   
+            .navbar a.active{
+                background-color: rgb(41,118,150);
+            }
+            .navbar a:hover {
+                background-color: #007bff;
+                color: #fff;
+            }
+            .navbar a.active {
+                background-color: #0056b3;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Courses</a>
+            <a href="#">Contact</a>
+        </nav>
+    </body>
+</html>
