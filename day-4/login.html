@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>LOGIN</title>
+        <style>
+            .container{
+                width: 400px;
+                padding: 20px;
+                margin:100px auto;
+                border: 2px solid black;
+                border-radius: 5px;
+                border-color: rgb(41, 118, 211);
+                text-align: center;
+            }
+            button{
+                background-color: rgb(41, 118, 211);
+                color: white;
+                height: 30px;
+                width: 150px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            input{
+                width: 300px;
+                padding: 12px;
+                border: 1px solid grey;
+            }
+            input:focus{
+                border-color: rgb(41, 118, 211);
+                outline: none;
+                box-shadow: 0 0 5px rgb(41, 118, 211);
+
+            }
+            button:hover{
+                background-color: rgb(2,158,255);
+            }
+            button:active{
+                opacity: 0.5;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 style="text-align: center;">LOGIN</h1>
+            <form type="post">
+                <input type="text" placeholder="username" required><br><br>
+                <input type="password" placeholder="password" minlength="8" maxlength="12" required><br><br>
+                <button>LOGIN</button>
+            </form>
+            <br>
+            <p>Forgot Password?<a href="#">Click here</a></p>
+        </div>
+    </body>
+</html>
