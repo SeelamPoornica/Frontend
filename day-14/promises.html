@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Promise</title>
+    </head>
+    <body>
+        <script>
+           
+            function Register(){
+                return new Promise((resolve,reject)=>{
+                });
+            }
+            ///console.log(Register());
+            //Promise.resolve() method
+            function Login(){
+                return Promise.resolve("success");
+            }
+            //console.log(Login());
+            //Promise.reject() method
+            function SignUp(){
+                return Promise.reject("Failure");
+            }
+            //console.log(SignUp());
+            //Entire function with both resolve and reject methods
+            function Signin(){
+                let status=true;
+                return new Promise((resolve,reject)=>{
+                    if(status){
+                        resolve("Success");
+                    }else{
+                        reject("Failure");
+                    }
+                });
+            }
+            //Signin().then((data)=>{console.log(data)}).catch((err)=>{console.log(err)});
+        </script>
+    </body>
+</html>
