@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Destructuring</title>
+    </head>
+    <body>
+        <script>
+            document.write("<h1>Object Destructuring</h1>");
+            document.write("<h2>Printing names</h2>")
+            const stud={id:1,name:"Alice",department:"CSE"};
+            const{id,name,department}=stud;
+            document.write(id+"<br>");
+            document.write(name+"<br>");
+            document.write(department);
+            document.write("<h2>Rename Variables</h2>");
+            const student={name:"Navya",age:19};
+            const{name:StudentName,age:StudentAge}=student;
+            document.write(StudentName+"<br>");
+            document.write(StudentAge);
+            document.write("<h2>Default values</h2>");
+            const user={uname:"Navya"};
+            const{uname,city="Tanuku"}=user;
+            document.write(name+"<br>");
+            document.write(city);
+            document.write("<h2>Nested object</h2>");
+            const employee={eid:43,address:{ecity:"Tanuku",state:"Andhra Pradesh"},phone:1234567};
+            const{eid,address:{ecity,state},phone}=employee;
+            document.write(eid+"<br>"+ecity+"<br>"+state+"<br>"+phone);
+            document.write("<h1>Array Destructuring</h1>");
+            document.write("<h2>Basic array destructuring</h2>");
+            const arr=["CSE","ECE","IT"];
+            const [b1,b2,b3]=arr;
+            document.write(b1+"<br>"+b2+"<br>"+b3);
+            document.write("<h2>Skip values</h2>");
+            const a1=[10,20,30,40];
+            document.write("Orginal array:"+a1+"<br>");
+            const [c1,,c3]=a1;
+            document.write("After skipping:"+c1+","+c3);
+            document.write("<h2>Swapping variables</h2>");
+            let x=10;
+            let y=20;
+            document.write("before swapping:"+x+" "+y+"<br>");
+            [x,y]=[y,x];
+            document.write("after swapping:"+x+" "+y+"<br>");
+        </script>
+    </body>
+</html>
