@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day-10</title>
+</head>
+<body>
+    <h2>Double the element</h2>
+    <div id="ele"></div>
+
+    <h2>Print upper case</h2>
+    <div id="e2"></div>
+
+    <h2>Retrieving name</h2>
+    <div id="e3"></div>
+
+    <h2>Filter</h2>
+    <div id="e4"></div>
+    <script>
+        // Double the elements
+        const arr = [1, 2, 3, 4];
+        const doubled = arr.map(element => element * 2);
+        document.getElementById("ele").innerHTML = doubled.join(", ");
+
+        // Print upper case
+        let s = "Hello";
+        let str = s.toUpperCase();
+        document.getElementById("e2").innerHTML = str;
+
+        // Retrieving name from object
+        let object = { "name": "navya", "age": 18, "branch": "cse" };
+        document.getElementById("e3").innerHTML = 
+            "Name: " + object.name + ", Age: " + object.age + ", Branch: " + object.branch;
+
+        //Filtering name from object
+        
+    </script>
+</body>
+</html>
