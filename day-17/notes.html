@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>NOTES</title>
+    <style>
+      .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .display {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border: 0.5px solid gray;
+        box-shadow: 0px 0px 5px gray;
+        border-radius: 20px;
+        width: 80%;
+        height: 300px;
+        padding: 20px;
+        margin: 20px auto;
+      }
+      #input {
+        box-shadow: 0px 0px 5px gray;
+        padding: 20px;
+        border-radius: 20px;
+        width: 80%;
+        height: 300px;
+        border-color: gray;
+      }
+      .btn {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: none;
+        font-weight: bold;
+        color: white;
+        border-radius: 20px;
+        height: 32px;
+        width: 100px;
+        background-color: rgb(60, 126, 202);
+        cursor: pointer;
+        transition: opacity 1ms;
+      }
+      .btn:hover {
+        opacity: 0.8;
+      }
+      .btn:active {
+        background-color: rgb(12, 82, 202);
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center">Notes</h2>
+    <div class="box">
+      <textarea id="input" placeholder="Write your notes here ...."></textarea>
+      <div class="buttons">
+        <button onclick="saveNotes()" class="btn">Save Notes</button>
+        <button onclick="clearAll()" class="btn">Clear Notes</button>
+      </div>
+    </div>
+
+    <h2 style="text-align: center">Display Notes</h2>
+    <div class="display">
+      <p id="notes"></p>
+    </div>
+    <script>
+      function saveNotes() {
+        const note = document.getElementById("input").value;
+        let notes = JSON.parse(localStorage.getItem("notes")) || [];
+        notes.push(note);
+        localStorage.setItem("notes", JSON.stringify(notes));
+        document.getElementById("input").value = "";
+        displayNotes();
+      }
+      function displayNotes() {
+        let notes = JSON.parse(localStorage.getItem("notes")) || [];
+        const notePara = document.getElementById("notes");
+        notePara.innerHTML = notes.join("<br>");
+      }
+      function clearAll() {
+        localStorage.removeItem("notes");
+        displayNotes();
+      }
+    </script>
+  </body>
+</html>
